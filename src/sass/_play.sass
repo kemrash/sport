@@ -1,0 +1,246 @@
+.play
+  padding: 61px 0
+
+  &__title-wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    gap: 10px
+    margin-bottom: 64px
+
+  &__title
+    line-height: 120%
+
+  &__link
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 6px
+    padding-bottom: 11px
+    color: $desktop-primary-orange
+
+    &:focus-visible
+      color: $desktop-hover-orange
+
+    &:active:not(:focus-visible)
+      color: $desktop-pressed-orange
+
+  &__arrow
+    width: 24px
+    height: 24px
+    fill: currentColor
+    transition: fill .3s ease-in-out
+
+  &__arrow_section
+    position: relative
+    top: -1px
+    right: -7px
+
+  &__list
+    display: flex
+    gap: 9px
+
+  &__item
+    width: calc((100% - 9px * 2) / 3)
+
+  &__article
+    display: flex
+    flex-direction: column
+    border-radius: 20px
+    height: 100%
+    min-height: 783px
+    background-color: $desktop-white
+    overflow: hidden
+    transition: background-color 0.3s ease-in-out
+
+    &::before
+      content: ""
+      display: block
+      margin-bottom: 21px
+      width: 100%
+      height: 520px
+      background-position: bottom center
+      background-size: auto
+      background-repeat: no-repeat
+
+    &_bg-1::before
+      background-image: url(../img/play-bg-desktop-1.webp)
+
+    &_bg-2::before
+      background-image: url(../img/play-bg-desktop-2.webp)
+      background-position: bottom right
+
+    &_bg-3::before
+      background-image: url(../img/play-bg-desktop-3.webp)
+
+    &_active
+      background-color: $desktop-black
+
+      &::before
+        margin-bottom: 0
+        height: 446px
+
+      & .play__subtitle,
+      & .play__text
+        color: $desktop-white
+
+      & .play__btn-link
+        position: static
+        margin-top: auto
+        transform: scale(1)
+
+  &__inner
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    gap: 18px
+    padding: 40px 24px 24px
+
+  &__subtitle,
+  &__text
+    max-width: 78%
+    transition: color .3s ease-in-out
+
+  &__subtitle
+    line-height: 130%
+
+  &__text
+    line-height: 160%
+
+  &__btn-link
+    position: fixed
+    transform: scale(0)
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    user-select: none
+    transition: transform .3s ease-in-out, background-color .3s ease-in-out
+
+    &:active:not(:focus-visible)
+      background-color: $desktop-pressed-orange
+
+@media (any-hover: hover)
+  .play
+    &__link:hover:not(:focus-visible):not(:active)
+      color: $desktop-hover-orange
+
+@media screen and (max-width: 1439px)
+  .play
+    &__subtitle,
+    &__text
+      max-width: 100%
+
+@media screen and (max-width: 1219px)
+  .play
+    &__list
+      flex-wrap: wrap
+
+    &__item
+      width: calc((100% - 9px) / 2)
+
+      &_big
+        order: 1
+        width: 100%
+
+    &__article
+      min-height: 700px
+
+      &::before
+        height: 450px
+
+      &_active
+        &::before
+          height: 400px
+
+      &_big
+        min-height: 446px
+
+        &::before
+          height: 300px
+
+    &__inner
+      padding: 24px
+
+    &__subtitle
+      &_big
+        max-width: 80%
+
+    &__text
+      &_big
+        max-width: 80%
+
+    &__btn-link
+      &_big
+        max-width: 47.481%
+
+@media screen and (max-width: 845px)
+ .play
+  &__link
+    padding-bottom: 0
+
+@media screen and (max-width: 640px)
+  .play
+    padding: 27px 0
+
+    &__link
+      gap: unset
+      padding-bottom: 0
+
+    &__arrow
+      &_section
+        display: none
+
+    &__title-wrap
+      margin-bottom: 21px
+
+    &__item
+      width: 100%
+
+    &__article
+      border-radius: 10px
+      min-height: 446px
+
+      &_bg-2
+        &::before
+          background-size: 310px 310px
+
+    &__btn-link
+      max-width: unset
+      width: 100%
+
+@media screen and (max-width: 425px)
+  .play
+    &__article
+      &::before
+        height: 246px
+        background-size: cover
+
+      &_bg-1
+        &::before
+          background-image: url(../img/play-bg-mobail-1.webp)
+
+      &_bg-2
+        &::before
+          background-image: url(../img/play-bg-mobail-2.webp)
+          background-size: unset
+
+      &_bg-3
+        &::before
+          margin-bottom: 39px
+          background-image: url(../img/play-bg-mobail-3.webp)
+
+      &_active
+        &::before
+          height: 216px
+
+    &__inner
+      gap: 11px
+      padding: 7px 12px
+
+    &__text
+      line-height: 140%
+
+    &__item
+      &_big
+        order: unset
+
+    &__text
+      max-width: 100%

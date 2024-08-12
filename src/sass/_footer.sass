@@ -1,0 +1,126 @@
+.footer
+  padding-bottom: 36px
+  background-image: url(../img/footer-basketball-ball-desktop.webp)
+  background-position: bottom right
+  background-repeat: no-repeat
+
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    justify-items: start
+    gap: 8px
+    padding-top: 36px
+    border-top: 1px solid $desktop-black
+
+  &__left
+    display: flex
+    grid-column: span 8
+    flex-direction: column
+    max-width: 90%
+    min-height: 599px
+
+  &__title
+    margin-bottom: 33px
+    line-height: 120%
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 29px
+
+  &__icon
+    width: 131.7px
+    height: 30.5px
+    fill: $desktop-black
+
+  &__link
+    display: block
+    border-radius: 20px
+    outline: 1px solid transparent
+    outline-offset: 3px
+    max-width: max-content
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    user-select: none
+    transition: outline .3s ease-in-out
+
+    &:focus-visible
+      outline-color: $desktop-hover-orange
+
+    &:active:not(:focus-visible)
+      outline-color: $desktop-pressed-orange
+
+  &__right
+    grid-column: span 4
+    padding: 28px 0 0
+
+  &__subtitle
+    line-height: 140%
+
+.qrcode
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 44px
+  border-radius: 29.789px
+  max-width: 352px
+  text-align: center
+  background-color: $desktop-white
+
+  &__img
+    margin-bottom: 37px
+
+  &__text
+    margin-bottom: 12px
+    line-height: 160%
+
+@media (any-hover: hover)
+  .footer
+    &__link:hover:not(:focus-visible):not(:active)
+      outline-color: $desktop-hover-orange
+
+@media screen and (max-width: 1219px)
+  .footer
+    background-position: bottom -100px right -100px
+
+    &__left
+      min-height: 520px
+
+@media screen and (max-width: 845px)
+  .footer
+    background-image: url(../img/footer-basketball-ball-mobail.webp)
+    background-position: bottom 57px right
+
+    &__left
+      grid-column: span 9
+      max-width: 100%
+      min-height: 320px
+
+    &__qrcode
+      display: none
+
+    &__icon
+      &_android
+        width: 118px
+        height: 31px
+
+@media screen and (max-width: 425px)
+  .footer
+    padding-bottom: 22px
+
+    &__wrapper
+      display: block
+      padding: 20px 0 0
+
+    &__left
+      min-height: 397px
+
+    &__title
+      margin-bottom: 21px
+      line-height: 130%
+
+    &__item
+      width: 100%
+
+    &__list
+      gap: 22px

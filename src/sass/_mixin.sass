@@ -1,0 +1,61 @@
+=font-load($font, $weight)
+  @font-face
+    font-family: $font
+    src: local("#{$font}-#{$weight}"), url("../fonts/#{$font}-#{$weight}.woff2") format("woff2"), url("../fonts/#{$font}-#{$weight}.woff") format("woff")
+
+    @if $weight == "Thin"
+      font-weight: 100
+
+    @if $weight == "Extra Light"
+      font-weight: 200
+
+    @if $weight == "Light"
+      font-weight: 300
+
+    @if $weight == "Regular"
+      font-weight: 400
+
+    @if $weight == "Medium"
+      font-weight: 500
+
+    @if $weight == "SemiBold"
+      font-weight: 600
+
+    @if $weight == "Bold"
+      font-weight: 700
+
+    @if $weight == "Extra Bold"
+      font-weight: 800
+
+    @if $weight == "Black"
+      font-weight: 900
+
+    font-style: normal
+    font-display: swap
+
+=list-reset
+  padding: 0
+  margin: 0
+  list-style: none
+
+=list-ol-reset
+  padding: 0
+  margin: 0
+
+=btn-reset
+  padding: 0
+  border: none
+  background-color: transparent
+  cursor: pointer
+
+=visually-hidden
+  position: fixed
+  transform: scale(0)
+
+=fieldset-reset
+  margin: 0
+  padding: 0
+  border: none
+
+=text-rubber
+  overflow-wrap: anywhere

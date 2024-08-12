@@ -1,0 +1,136 @@
+.header
+  padding: 20px 0 4px
+
+  &__wrapper
+    display: flex
+    align-items: center
+    padding: 21px 20px 19px
+    border-radius: 20px
+    background-color: $desktop-white
+
+  &__inner
+    padding: 0 20px
+
+  &__logo
+    margin-right: 54px
+    padding-top: 6px
+
+  &__nav
+    margin-right: auto
+
+  &__btn
+    outline: 1px solid transparent
+    outline-offset: 3px
+    line-height: 140%
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    user-select: none
+    transition: color .3s ease-in-out, outline .3s ease-in-out
+
+    &_menu
+      margin-right: 6px
+
+    &:focus-visible
+      outline: 1px solid transparent
+      color: $desktop-hover-orange
+
+    &:active:not(:focus-visible)
+      color: $desktop-pressed-orange
+
+.logo
+  display: inline-block
+  flex-shrink: 0
+  border-radius: 20px
+  outline: 1px solid transparent
+  outline-offset: 3px
+  font-size: 0
+  transition: outline .3s ease-in-out
+
+  &:focus-visible
+    outline-color: $desktop-hover-orange
+
+.nav
+  padding: 0 10px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 24.5px
+
+  &__link
+    line-height: 140%
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    transition: color .3s ease-in-out
+
+    &:focus-visible
+      color: $desktop-hover-orange
+
+    &:active:not(:focus-visible)
+      color: $desktop-pressed-orange
+
+@media (any-hover: hover)
+  .nav__link:hover:not(:focus-visible):not(:active),
+  .header__btn:hover:not(:focus-visible):not(:active)
+    color: $desktop-hover-orange
+
+@media screen and (max-width: 1219px)
+  .header
+    &__wrapper
+      flex-wrap: wrap
+      row-gap: 20px
+
+    &__logo
+      margin-right: auto
+
+    &__nav
+      order: 1
+      padding: 0
+      width: 100%
+
+@media screen and (max-width: 767px)
+  .header
+    &__nav
+      display: none
+
+@media screen and (max-width: 640px)
+  .header
+    padding: 11px 0 4px
+    border-radius: 10px
+
+    &__wrapper
+      justify-content: space-between
+      flex-wrap: nowrap
+      gap: 10px
+      padding: 9px 8px 9px 12px
+
+    &__nav
+      order: unset
+
+    &__btn
+      &:focus
+        outline-color: $desktop-hover-orange
+
+      &_menu
+        order: -1
+        margin-right: 0
+        padding: 0
+        width: 32px
+        height: 32px
+        background-size: 32px 32px
+
+      &_login
+        position: relative
+        left: -4px
+        padding: 0
+        border: none
+        width: 32px
+        height: 32px
+        background-size: 32px 32px
+
+      &_menu
+        background-position: center center
+
+  .logo
+    margin-right: 0
+    padding-top: 0
+    width: 70px
+    height: 13px

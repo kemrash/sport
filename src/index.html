@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPAGE - спортивный портал.</title>
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="img/favicon.svg" rel="icon" type="image/svg+xml">
+  <link href="fonts/DrukWideCyr-Bold.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+  <link href="img/hero-mobail-bg-1.webp" rel="preload" media="(max-width: 425px)" as="image" type="image/webp">
+  <link href="img/hero-bg-1.webp" rel="preload" media="(min-width: 451px)" as="image" type="image/webp">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <header class="header">
+    @@include('template/header.html')
+  </header>
+
+  <main class="main">
+    <h1 class="visually-hidden">XPAGE - спортивный портал.</h1>
+    <section class="hero">
+      @@include('template/hero.html')
+    </section>
+    <section class="play">
+      @@include('template/play.html')
+    </section>
+    <section class="learn">
+      @@include('template/learn.html')
+    </section>
+  </main>
+
+  <footer class="footer">
+    @@include('template/footer.html')
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

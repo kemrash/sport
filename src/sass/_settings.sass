@@ -1,0 +1,208 @@
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+*,
+::before,
+::after
+  box-sizing: inherit
+
+img
+  max-width: 100%
+
+a
+  text-decoration: none
+
+*:focus-visible
+  outline: none
+
+.page
+  min-width: 320px
+  font-family: $first-font-family
+  background-color: $desktop-grey-100
+  +text-rubber
+
+.container
+  margin: 0 auto
+  padding: 0 20px
+  max-width: 1920px
+
+.list-reset
+  +list-reset
+
+.btn-reset
+  +btn-reset
+
+.visually-hidden
+  +visually-hidden
+
+.font-second
+  font-family: $second-font-family
+
+.text-reset
+  margin: 0
+
+.blockquote-reset
+  margin: 0
+
+.desktop-none
+  display: none
+
+.mobile-none
+  display: block
+
+.text
+  font-size: $font-normal
+  font-weight: 700
+
+  &_tiny
+    font-size: $font-tiny
+
+  &_small
+    font-size: $font-small
+
+  &_medium
+    font-size: $font-medium
+
+  &_large
+    font-size: $font-large
+
+  &_large-48
+    font-size: $font-large-48
+
+  &_big
+    font-size: $font-big
+
+  &_fw-medium
+    font-weight: 500
+
+  &_white
+    color: $desktop-white
+
+  &_black
+    color: $desktop-black
+
+  &_orange
+    color: $desktop-primary-orange
+
+  &_green
+    color: $desktop-primary-green
+
+  &_grey-400
+    color: $desktop-grey-400
+
+  &_uppercase
+    text-transform: uppercase
+
+.btn
+  border-radius: 20px
+
+  &_white
+    background-color: $desktop-white
+
+  &_menu
+    padding: 9px 16px 9px 37px
+    background-image: url(../img/burger.svg)
+    background-position: 5px center
+    background-size: 24px 24px
+    background-repeat: no-repeat
+
+  &_login
+    padding: 7px 43px 7px 13px
+    border: 3px solid $desktop-background
+    background-color: $desktop-background
+    background-image: url(../img/user.webp)
+    background-position: center right
+    background-repeat: no-repeat
+
+  &_active
+    color: $desktop-white
+    background-color: $desktop-primary-orange
+
+    & .hero__arrow
+      opacity: 1
+
+.link
+  &_btn-orange
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 21px 23px 18px
+    border-radius: 20px
+    width: 100%
+    color: $desktop-white
+    background-color: $desktop-primary-orange
+
+  &_btn-white,
+  &_btn-white-20,
+  &_btn-desktop-background,
+  &_btn-black
+    display: inline-block
+    padding: 10px 16px 7px 12px
+    border-radius: 38.638px
+
+  &_btn-white
+    background-color: $desktop-white
+
+  &_btn-white-20
+    background-color: $desktop-white-20
+
+  &_btn-desktop-background
+    background-color: $desktop-background
+
+  &_btn-black
+    background-color: $desktop-black
+
+.section-link
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  user-select: none
+  transition: color .3s ease-in-out
+
+@media screen and (max-width: 1219px)
+  .text
+    &_big
+      font-size: $font-laptop-big
+
+    &_large-48
+      font-size: $font-large
+  .container
+    padding: 0 35px
+
+@media screen and (max-width: 845px)
+  .text
+    font-size: $font-mobail-normal
+
+    &_tiny
+      font-size: $font-mobail-tyny
+
+    &_small
+      font-size: $font-mobail-small
+
+    &_medium
+      font-size: $font-mobail-normal
+
+    &_large,
+    &_large-48
+      font-size: $font-mobail-large
+
+    &_big
+      font-size: $font-mobail-big
+
+  .link
+    &_btn-orange
+      padding: 10px 14px
+
+@media screen and (max-width: 640px)
+  .page
+    background-color: $desktop-background
+
+  .desktop-none
+    display: block
+
+  .mobile-none
+    display: none
+
+@media screen and (max-width: 425px)
+  .container
+    padding: 0 12px
+

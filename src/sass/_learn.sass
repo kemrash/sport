@@ -1,0 +1,298 @@
+.learn
+  padding: 58px 0 120px
+
+  &__wrapper
+    padding: 35px 32px 32px
+    border-radius: 20px
+    background-color: $desktop-white
+
+  &__title-wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    gap: 10px
+    margin-bottom: 62px
+
+  &__title
+    line-height: 120%
+
+  &__link
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 13px
+    padding: 0 0 11px
+    color: $desktop-primary-green
+
+    &:focus-visible
+      color: $desktop-green-hover
+
+    &:active:not(:focus-visible)
+      color: $desktop-pressed-green
+
+  &__arrow
+    width: 24px
+    height: 24px
+    fill: currentColor
+    transition: fill .3s ease-in-out
+
+  &__box
+    display: flex
+    column-gap: 16px
+
+  &__list-left
+    gap: 20px
+    width: 65.73%
+
+  &__list-left,
+  &__list-right
+    display: flex
+    flex-direction: column
+
+  &__item-left,
+  &__item-right
+    flex-grow: 1
+
+  &__article
+    height: 100%
+
+  &__list-right
+    padding-left: 16px
+    width: calc(100% - 65.73% - 16px)
+    border-left: 1px solid $desktop-grey-200
+
+.learn-left
+  display: flex
+  flex-direction: column
+  gap: 20px
+  padding: 24px
+  border-radius: 14.489px
+
+  &_bg-img
+    min-height: 611px
+    background-color: $desktop-black
+    background-image: linear-gradient(180deg, rgba(32, 32, 32, 0.30) 0%, rgba(32, 32, 32, 0.00) 70.7%), url(../img/learn-bg-desktop-1.webp)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    overflow: hidden
+
+  &_bg-green
+    min-height: 294px
+    background-color: $desktop-primary-green
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 6px 1px
+    max-width: 580px
+
+  &__title
+    margin-bottom: auto
+    max-width: 67%
+    line-height: 120%
+
+  &__link
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    user-select: none
+    transition: color .3s ease-in-out, background-color .3s ease-in-out
+
+    &_1
+      align-self: start
+
+    &:focus-visible
+      color: $desktop-white
+      background-color: $desktop-hover-orange
+
+    &:active:not(:focus-visible)
+      color: $desktop-white
+      background-color: $desktop-pressed-orange
+
+.learn-right
+  display: flex
+  flex-direction: column
+  padding: 2px 0 20px
+  border-bottom: 1px solid $desktop-grey-200
+  min-height: 303px
+
+  &_without-inner
+    padding-top: 18px
+    min-height: 319px
+
+  &_without-inner-2
+    padding: 22px 0 0
+    border-bottom: none
+    min-height: 303px
+
+  &__arrow-link
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 12px
+    margin-bottom: auto
+    max-width: max-content
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    user-select: none
+    transition: color .3s ease-in-out
+
+    &:focus-visible
+      color: $desktop-green-hover
+
+      & .learn-right__arrow
+        fill: $desktop-green-hover
+
+    &:active:not(:focus-visible)
+      color: $desktop-pressed-green
+
+      & .learn-right__arrow
+        fill: $desktop-pressed-green
+
+  &__arrow
+    width: 24px
+    height: 24px
+    fill: white
+    transform: translateX(-10px)
+    transition: fill .3s ease-in-out, transform .3s ease-in-out
+
+  &__inner
+    display: flex
+    gap: 19px
+    padding-top: 20px
+
+    &::before
+      content: ""
+      display: block
+      border-radius: 6px
+      width: calc(100% - 319px)
+      min-height: 152px
+      background-image: url(../img/learn-right.webp)
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+
+  &__holder
+    display: flex
+    flex-direction: column
+    width: 295px
+
+    &_without-inner
+      gap: 17px
+      width: 100%
+      max-width: 80%
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 6px 1px
+
+  &__title
+    margin-bottom: auto
+    line-height: 140%
+
+  &__link
+    align-self: start
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    user-select: none
+    transition: color .3s ease-in-out, background-color .3s ease-in-out
+
+    &:focus-visible
+      color: $desktop-white
+      background-color: $desktop-hover-orange
+
+    &:active:not(:focus-visible)
+      color: $desktop-white
+      background-color: $desktop-pressed-orange
+
+@media (any-hover: hover)
+  .learn
+    &__link:hover:not(:focus-visible):not(:active)
+      color: $desktop-green-hover
+
+  .learn-left__link:hover:not(:focus-visible):not(:active),
+  .learn-right__link:hover:not(:focus-visible):not(:active)
+    color: $desktop-white
+    background-color: $desktop-hover-orange
+
+  .learn-right__arrow-link:hover:not(:focus-visible):not(:active)
+    color: $desktop-green-hover
+
+    & .learn-right__arrow
+      fill: $desktop-green-hover
+      transform: translateX(0)
+
+@media screen and (max-width: 1439px)
+  .learn-left
+    &__title
+      max-width: 100%
+
+  .learn-right
+    &__inner
+      flex-wrap: wrap
+
+      &::before
+        width: 100%
+        max-width: 318px
+
+    &__holder
+      gap: 17px
+      max-width: 100%
+
+@media screen and (max-width: 930px)
+  .learn
+    &__list-left
+      width: 100%
+
+    &__list-right
+      display: none
+
+  .learn-left
+    &_bg-img
+      min-height: 400px
+
+@media screen and (max-width: 845px)
+  .learn
+    &__link
+      padding-bottom: 0
+
+@media screen and (max-width: 640px)
+  .learn
+    padding: 27px 0
+
+    &__wrapper
+      padding: 0
+      background-color: transparent
+
+    &__link
+      padding: 0
+
+    &__arrow
+      display: none
+
+    &__title-wrap
+      margin-bottom: 17px
+
+  .learn-left
+    padding: 13px 11px
+    border-radius: 10px
+
+@media screen and (max-width: 425px)
+  .learn
+    padding: 13px 0 42px
+
+    &__list-left
+      gap: 8px
+
+  .learn-left
+    padding: 12px 11px 11px
+
+    &_bg-green
+      min-height: 400px
+
+    &_bg-img
+      background-image: linear-gradient(180deg, rgba(32, 32, 32, 0.30) 0%, rgba(32, 32, 32, 0.00) 100%), url(../img/learn-bg-mobail-1.webp)
+
+    &__title
+      line-height: 130%
+
+    &__list
+      gap: 2px 1px
