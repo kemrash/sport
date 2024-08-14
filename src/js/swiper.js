@@ -5,14 +5,14 @@
     scrollbar: false,
   });
 
-  function onSlide(link) {
-    const slideIndex = link.getAttribute("data-slide");
+  function onSlide(button) {
+    const slideIndex = button.getAttribute("data-slide");
     swiper.slideTo(slideIndex);
   }
 
-  document.querySelectorAll(".hero__btn").forEach((link) => {
-    link.addEventListener("mouseenter", () => onSlide(link));
-    link.addEventListener("keyup", (e) => {
+  document.querySelectorAll(".hero__btn").forEach((button) => {
+    button.addEventListener("mouseenter", () => onSlide(button));
+    button.addEventListener("keyup", (e) => {
       if (e.key === "Tab") onSlide(link);
     });
   });
